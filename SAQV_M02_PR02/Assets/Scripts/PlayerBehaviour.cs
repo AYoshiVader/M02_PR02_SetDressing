@@ -41,7 +41,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             doJump = Input.GetKeyDown(KeyCode.Space);
         }
-        if (!shoot)
+        if (!shoot && gameManager.Energy > 0)
         {
             shoot = Input.GetMouseButtonDown(0);
         }
