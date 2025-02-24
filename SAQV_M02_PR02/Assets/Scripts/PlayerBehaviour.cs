@@ -66,6 +66,7 @@ public class PlayerBehaviour : MonoBehaviour
             Rigidbody bulletRB = newBullet.GetComponent<Rigidbody>();
             bulletRB.velocity = this.transform.forward * bulletSpeed;
             shoot = false;
+            gameManager.Energy -= 1;
         }
 
         Vector3 rotation = Vector3.up * hInput;
@@ -96,6 +97,22 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(collision.transform.parent.gameObject);
             UnityEngine.Debug.Log("Healing Time!");
             gameManager.HP += 1;
+        }
+        if (collision.gameObject.name == "EnergySymbol" && gameManager.Energy < gameManager.MaxEnergy)
+        {
+            Destroy(collision.transform.parent.gameObject);
+            UnityEngine.Debug.Log("Energize!");
+            gameManager.Energy += 10;
+            if(gameManager.Energy > gameManager.MaxEnergy)
+            {
+                gameManager.Energy = gameManager.MaxEnergy;
+            }
+        }
+        if (collision.gameObject.name == "ShieldSymbol")
+        {
+            Destroy(collision.transform.parent.gameObject);
+            UnityEngine.Debug.Log("ShieldReady!");
+            gameManager.Shields += 1;
         }
     }
 }

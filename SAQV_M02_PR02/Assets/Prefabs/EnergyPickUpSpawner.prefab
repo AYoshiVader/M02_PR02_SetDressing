@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7885349432039659693
+--- !u!1 &6644940837207872330
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7990294038770774184}
-  - component: {fileID: -5269432612282054400}
+  - component: {fileID: 7035706673800519591}
+  - component: {fileID: 2501504992911035298}
   m_Layer: 0
-  m_Name: HealthPickUpSpawner
+  m_Name: EnergyPickUpSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7990294038770774184
+--- !u!4 &7035706673800519591
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7885349432039659693}
+  m_GameObject: {fileID: 6644940837207872330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9220526292193655578}
+  - {fileID: 2597435863420399114}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5269432612282054400
+--- !u!114 &2501504992911035298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7885349432039659693}
+  m_GameObject: {fileID: 6644940837207872330}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 483facce6b746ae4e92100eeb7745052, type: 3}
@@ -47,17 +47,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restockTimer: 100
   spawnTimer: 0
-  pickUp: {fileID: 3229326565278220558, guid: bd4bdd7fabfe8274ca73bebab86cd09d, type: 3}
+  pickUp: {fileID: 5042647531796603058, guid: 85c4c8b1c571b084ab6a99d845f9d36d, type: 3}
   instance: {fileID: 0}
   isSpawned: 0
   gameManager: {fileID: 0}
---- !u!1001 &5801574438197889704
+--- !u!1001 &827893627728945080
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7990294038770774184}
+    m_TransformParent: {fileID: 7035706673800519591}
     m_Modifications:
     - target: {fileID: 2611355875481217800, guid: b0ab16ab2bd40dd459fc6b023d827216, type: 3}
       propertyPath: m_Name
@@ -104,8 +104,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0ab16ab2bd40dd459fc6b023d827216, type: 3}
---- !u!4 &9220526292193655578 stripped
+--- !u!4 &2597435863420399114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3420122151198372274, guid: b0ab16ab2bd40dd459fc6b023d827216, type: 3}
-  m_PrefabInstance: {fileID: 5801574438197889704}
+  m_PrefabInstance: {fileID: 827893627728945080}
   m_PrefabAsset: {fileID: 0}

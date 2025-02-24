@@ -10,7 +10,18 @@ public class GameBehaviour : MonoBehaviour
     public bool showWinScreen = false;
     public bool showLoseScreen = false;
 
-    private int _energyStored = 0;
+    private int _energyMax = 30;
+    public int MaxEnergy
+    {
+        get { return _energyMax; }
+        set
+        {
+            _energyMax = value;
+            UnityEngine.Debug.LogFormat("MaxEnergy: {0}", _energyMax);
+        }
+    }
+
+    private int _energyStored = 30;
     public int Energy
     {
         get { return _energyStored; }
@@ -94,7 +105,7 @@ public class GameBehaviour : MonoBehaviour
     {
         GUI.Box(new Rect(20, 20, 150, 25), "Player Health:" + _playerHP + "/" + _playerMaxHP);
         GUI.Box(new Rect(20, 50, 150, 25), "Shield Charges:" + _playerShield);
-        GUI.Box(new Rect(20, 80, 150, 25), "Energy Collected: " + _energyStored);
+        GUI.Box(new Rect(20, 80, 150, 25), "Energy Collected: " + _energyStored + "/" + _energyMax);
         GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height - 50, 300, 50), labelText);
         if (showWinScreen)
         {
